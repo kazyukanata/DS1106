@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>DS検定 頻出120問完全マスター（合格率90%レベル）</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex items-center justify-center min-h-screen m-0 p-0">
+
+    <div class="phone-frame bg-slate-900 text-slate-100 flex flex-col relative overflow-hidden">
+
+        <!-- ヘッダーバー -->
+        <div class="bg-slate-950 px-6 py-3 flex justify-between items-center text-xs text-slate-400 select-none z-20">
+            <span id="current-time" class="font-semibold tracking-wider">12:00</span>
+            <div class="flex items-center space-x-2">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block;vertical-align:-0.125em;flex-shrink:0;"><path fill="currentColor" stroke="none" d="M4 15h2.2v3H4v-3Zm4.9-4h2.2v7H8.9v-7Zm4.9-4h2.2v11h-2.2V7Zm4.9-4H21v15h-2.2V3Z"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block;vertical-align:-0.125em;flex-shrink:0;"><path d="M2 8.5a16 16 0 0 1 20 0M5 12a11 11 0 0 1 14 0M8.5 15.5a6 6 0 0 1 7 0"/><circle cx="12" cy="19" r="1.1" fill="currentColor" stroke="none"/></svg>
+                <svg class="text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block;vertical-align:-0.125em;flex-shrink:0;"><rect x="2" y="7" width="18" height="10" rx="2"/><path d="M22 10v4"/><path d="M5.5 10v4M9 10v4M12.5 10v4M16 10v4"/></svg>
+            </div>
+        </div>
+
+        <!-- アプリ表示領域 -->
+        <div id="app-container" class="flex-1 flex flex-col overflow-y-auto smooth-scroll relative bg-gradient-to-b from-slate-900 to-slate-950">
+            <!-- 動的描画領域 -->
+        </div>
+
+        <!-- フッターインジケーター -->
+        <div class="bg-slate-950 py-2 flex justify-center items-center select-none z-20">
+            <div class="w-32 h-1 bg-slate-700 rounded-full"></div>
+        </div>
+    </div>
+
+    <!-- 内容（データ）→ 動作（ロジック）の順で読み込む -->
+    <script src="data.js"></script>
+    <script src="lessons.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
